@@ -1,8 +1,4 @@
 #!/bin/sh
-
-#Modo de usar:
-curl -s <em>http://github.c/script.sh</em> | bash
-stty -echo
 read -p "Insira a senha: " pass
 stty echo
 echo "\n#################<VSCODE>#################"
