@@ -76,10 +76,12 @@ Um exemplo (diferente do nosso, mas não tão diferente) de influência entre as
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{altoOeste.jpeg}
+    \includegraphics[width=\linewidth]{altoOeste.jpeg}
     \caption{Microrregiões do RN Fonte: \href{https://pt.wikipedia.org/wiki/lista_de_mesorregi\%C3\%B5es_e_microrregi\%C3\%B5es_do_Rio_Grande_do_Norte}{microrregiões do RN}} 
     \label{fig:fig1}
 \end{figure}
+
+\newpage
 
 \section*{Exercício avaliativo:}
 
@@ -87,15 +89,15 @@ Construa um Grafo na qual:
 
 \begin{itemize}
     \item Os \textbf{Vértices} são as cidades.
-    \item Se duas cidades são vizinhas, então existe uma \textbf{Aresta} que as conectam.
+    \item Se duas cidades estão a uma distância de até $D\ km$, então existe uma \textbf{Aresta} que as conectam.
 \end{itemize}
 
-Ver o código exemplo aqui.
+\subsection*{Questão Única}
+\begin{enumerate}[label=\Roman*)]
+    \item Calcule a distância entre cada dois pares de cidades (vértices). Se a distância for menor do que uma distância $D\ km$\footnote{A distância D é um parâmetro da função que o grafo será construído}, conecte as cidades por uma aresta ponderada (o peso entre das arestas é igual a distância entre elas).
+    \item Identifique a cidade (vértice) que tem mais cidades vizinhas (grau dos vértices) no Rio Grande do Norte em função da distância D.
+    \item Qual cidade não tem vizinhos, baseados na distância D?
+    \end{enumerate}
 
-
-Calcule a distância entre todas as cidades listadas nos arquivos {\color{blue} cidades.csv} que tem as localizações definidas por {\color{blue} coordenadas.csv}.
-
-Após calcular 
-    
-
+    As respostas devem estar no arquivo main.cpp com o seguinte modelo apresentado \href{https://github.com/kennedyufersa/scriptLab/main.cpp}{neste arquivo}.
 \end{document}
