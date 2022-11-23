@@ -1,3 +1,6 @@
+#ifndef GRAFO_CPP
+#define GRAFO_CPP
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,8 +20,8 @@ float **alocaMatriz(){
 }
 
 dataItem* RN(){
-    cidade *todasCidades = getCidades((char*)"bancoDeDados/legenda.txt");
-    gps *todosLocais = getGps((char*)"bancoDeDados/coordenadas.csv");
+    cidade *todasCidades = getCidades((char*)"bancoDeDados/cidades.csv");
+    gps *todosLocais = getGps((char*)"bancoDeDados/coordenada.csv");
 
     dataItem* d = getItens(todasCidades, todosLocais);
 
@@ -148,3 +151,5 @@ void printGrafoMatricial(float **matriz){
 
     printf("\n\n");
 }
+
+#endif
