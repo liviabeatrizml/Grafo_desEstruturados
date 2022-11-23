@@ -1,28 +1,35 @@
-/**
- * ATENÇÃO: Este arquivo é apenas um modelo de como pretendo que as respostas finais sejam apresentadas por vocês.
-*/
 #include <stdio.h>
-/**
- * O Arquivo estrutura.cpp inclui todas as funções que definem o Grafo e serão utilizadas neste arquivo main.cpp.
- */
-#include "estruturas.cpp"
+#include <stdlib.h>
+
+// #include "Estrutura.cpp"
+#include "Grafo.cpp"
 
 int main() {
-    Grafo G = criarGrafo("cidades.csv", "coordenada.csv");
-    float *D = {0.05, 0.1, 0.15, 0.20, 0.25};
-    // Questão I
+    dataItem* InfosRN = RN();
+
+    Grafo G = criarGrafo();
+    
+    float D[] = {0.05, 0.1, 0.15, 0.20, 0.25};
+
+    // QuestÃ£o I
     for (size_t i = 0; i < 5; i++) {
-        printTodasDistancias(G, D);
+        printf("--- GRAFO MATRICIAL das cidades vizinhas do RN com base na distancia de %f. ---\n", D[i]);
+        printGrafoMatricial(calculaDistancia(G, InfosRN, D[i]));
     }
 
-    //Questão II
+    //QuestÃ£o II
     for (size_t i = 0; i < 5; i++) {
-        printCidadeComMaisVizinhos(G, D);
+        printf("\n--- A cidade do RN com mais vizinhas com base na distancia de %f Ã© a seguinte. ---\n", D[i]);
+        printCidadeComMaisVizinhos(calculaDistancia(G, InfosRN, D[i]), InfosRN, D[i]);
     }
 
-    //Questão III
+    //QuestÃ£o III
     for (size_t i = 0; i < 5; i++) {
-        printCidadeSemVizinhos(G, D);
+        printf("\n--- A cidade do RN que nÃ£o tem nenhuma vizinha com base na distancia de %f Ã© a seguinte. ---\n", D[i]);
+        printCidadeSemVizinhos(calculaDistancia(G, InfosRN, D[i]), InfosRN, D);
     }
+
+    //QuestÃ£o IV
+    printDistTodasVizinhas(InfosRN);
 
 }
