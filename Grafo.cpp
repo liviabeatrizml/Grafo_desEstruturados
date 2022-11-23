@@ -12,11 +12,16 @@
 typedef float** Grafo;
 
 float **alocaMatriz(){
-    float **matriz = (float **) malloc(SIZE * sizeof(float*));
+    size_t i, j;
 
-    for (size_t i = 0; i < SIZE; i++){
-        matriz[i] = (float *) malloc(SIZE * sizeof(float));
-    }
+    float **matriz = (float** ) malloc(16 * sizeof(float*));
+
+    for(i = 0; i < 16; i++)
+        matriz[i] = (float* ) malloc(16 * sizeof(float));
+
+
+
+    return matriz;
 }
 
 dataItem* RN(){
@@ -42,7 +47,11 @@ dataItem* RN(){
 Grafo criarGrafo(){
     int i, j;
     
-    float **matriz = alocaMatriz(); 
+    float **matriz = (float **) malloc(SIZE * sizeof(float*));
+
+    for (size_t i = 0; i < SIZE; i++){
+        matriz[i] = (float *) malloc(SIZE * sizeof(float));
+    }
 
     for (i = 0; i < SIZE; i++) {
         for (j = 0; j < SIZE; j++) 
