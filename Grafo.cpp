@@ -28,7 +28,7 @@ dataItem* RN(){
     cidade* cidadesDoRN = (cidade*) malloc(167 * sizeof(cidade*));
     gps * localRN = (gps*) malloc(167 * sizeof(gps*));
 
-    int i, k;
+    int i, k = 0;
 
     for(i = 0; i < 5570; i++){
         if(strcmp(d->city.estado, "RN") == 0){
