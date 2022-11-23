@@ -25,22 +25,18 @@ dataItem* RN(){
 
     dataItem* d = getItens(todasCidades, todosLocais);
 
-    cidade* cidadesDoRN = (cidade*) malloc(167 * sizeof(cidade*));
-    gps * localRN = (gps*) malloc(167 * sizeof(gps*));
+    dataItem* cidadesDoRN = (dataItem*) malloc(167 * sizeof(cidade*));
 
     int i, k = 0;
 
     for(i = 0; i < 5570; i++){
-        if(strcmp(d->city.estado, "RN") == 0){
-            cidadesDoRN[k] = todasCidades[i];
-            localRN[k] = todosLocais[i];
+        if(strcmp(d[i].city.estado, "RN") == 0){
+            cidadesDoRN[k] = d[i];
             k++;
         }
     }
 
-    dataItem* Infos = getItensRN(cidadesDoRN, localRN);
-
-    return Infos;
+    return cidadesDoRN;
 }
 
 Grafo criarGrafo(){
