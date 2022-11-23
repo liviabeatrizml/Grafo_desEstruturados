@@ -38,7 +38,7 @@ dataItem* RN(){
         }
     }
 
-    dataItem* Infos = getItens(cidadesDoRN, localRN);
+    dataItem* Infos = getItensRN(cidadesDoRN, localRN);
 
     return Infos;
 }
