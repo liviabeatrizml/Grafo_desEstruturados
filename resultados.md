@@ -1,4 +1,5 @@
 ## Resultados
+> Aqui terá apenas os resultados, a explicação do código está no README.md
 
 ### Tabela 
 | Dist |   **Cid. mais viz**  | Qnt | **Cid. menos viz** | Qnt |
