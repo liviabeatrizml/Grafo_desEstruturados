@@ -5,17 +5,16 @@
 #include "Grafo.cpp"
 
 int main() {
-    dataItem* InfosRN = RN();
-
-    float **G = criarGrafo(InfosRN);
+    float **G = criarGrafo();
     
+    dataItem* InfosRN = RN();
     float D[] = {0.05, 0.1, 0.15, 0.20, 0.25};
 
     // Questão I
-    for (size_t i = 0; i < 5; i++) {
-        printf("--- GRAFO MATRICIAL das cidades vizinhas do RN com base na distancia de %f. ---\n", D[i]);
-        printGrafoMatricial(calculaDistancia(G, InfosRN, D[i]));
-    }
+    // for (size_t i = 0; i < 5; i++) {
+    //     printf("--- GRAFO MATRICIAL das cidades vizinhas do RN com base na distancia de %f. ---\n", D[i]);
+    //     printGrafoMatricial(calculaDistancia(G, InfosRN, D[i]));
+    // }
 
     //Questão II
     for (size_t i = 0; i < 5; i++) {

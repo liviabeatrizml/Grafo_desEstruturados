@@ -44,21 +44,19 @@ dataItem* RN(){
     return cidadesDoRN;
 }
 
-float **criarGrafo(dataItem* informacoesRN){
+float **criarGrafo(){
     int i, j;
 
-    // float **mat = (float**) malloc(SIZE*sizeof(float*));
-    // for(i = 0; i < SIZE; i++)
-    //     mat[i] = (float*) malloc(SIZE*sizeof(float));
+    float **matriz = (float**) malloc(16 * sizeof(float*));
+    for(i = 0; i < 16; i++)
+        matriz[i] = (float*) malloc(16 * sizeof(float));
 
-    // float matriz[167][167];
+    for (i = 0; i < 16; i++) {
+        for (j = 0; j < 16; j++) 
+            matriz[i][j] = 0;
+    }
 
-    // for (i = 0; i < SIZE; i++) {
-    //     for (j = 0; j < SIZE; j++) 
-    //         matriz[i][j] = 0;
-    // }
-
-    // return matriz;
+    return matriz;
 }
 
 float** calculaDistancia(float **Grafo, dataItem* informacoesRN, float Distancia){
