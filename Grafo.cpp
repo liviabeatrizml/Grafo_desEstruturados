@@ -14,12 +14,9 @@
 float **alocaMatriz(){
     size_t i, j;
 
-    float **matriz = (float** ) malloc(16 * sizeof(float*));
-
-    for(i = 0; i < 16; i++)
-        matriz[i] = (float* ) malloc(16 * sizeof(float));
-
-
+    float **matriz = (float**) malloc(SIZE * sizeof(float*));
+    for(i = 0; i < SIZE; i++)
+        matriz[i] = (float*) malloc(SIZE * sizeof(float));
 
     return matriz;
 }
@@ -47,12 +44,10 @@ dataItem* RN(){
 float **criarGrafo(){
     int i, j;
 
-    float **matriz = (float**) malloc(16 * sizeof(float*));
-    for(i = 0; i < 16; i++)
-        matriz[i] = (float*) malloc(16 * sizeof(float));
+    float** matriz = alocaMatriz();
 
-    for (i = 0; i < 16; i++) {
-        for (j = 0; j < 16; j++) 
+    for (i = 0; i < 167; i++) {
+        for (j = 0; j < 167; j++) 
             matriz[i][j] = 0;
     }
 
@@ -148,11 +143,15 @@ void printGrafoMatricial(float **matriz){
     for (int i = 0; i < SIZE; i++) {
         printf("\n");
         for (int j = 0; j < SIZE; j++) {
-            matriz[i][j] == 0 ? printf("%.1f\t", matriz[i][j]): printf("%.3f\t", matriz[i][j]);
+            if(matriz[i][j] == 0){
+                printf("%.1f\t", matriz[i][j]);
+            } else {
+                printf("%.3f\t", matriz[i][j]);
+            }
         }
-    }
 
-    printf("\n\n");
+        printf("\n\n");
+    }
 }
 
 #endif
