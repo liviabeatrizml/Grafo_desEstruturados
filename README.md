@@ -17,22 +17,21 @@ Baseado no estudo dos Grafos, diante das aulas teóricas em sala de aula, foi po
 
  -  Alteração no código pré-determinado pelo professor
 	-   Arquivos não alterados
-	    -   cidade.cpp - Não alteramos nada nesse arquivo para mantermos a mesma estrutura utilizada no projeto Hash (https://github.com/liviabeatrizml/hashTable_desEstruturados);
+	    -   cidade.cpp - Não alteramos nada nesse arquivo para mantermos a mesma estrutura utilizada no projeto [Hash](https://github.com/liviabeatrizml/hashTable_desEstruturados);
+	    - lerArquivos.cpp - Não alteramos nada nesse arquivo para mantermos a mesma estrutura utilizada no projeto [Hash](https://github.com/liviabeatrizml/hashTable_desEstruturados).
 	-   Arquivos alterados
 		-   bancoDeDados - Organizamos um banco de dados contendo as informações das cidades;
-		-   lerArquivos.cpp - Organizamos as funções de captura de dados, nesse arquivo irá dispor das seguintes funções: getCidades(irá buscar/pegar as cidades), getGPS(irá buscar/pegar as coordenadas) e getItens(irá pegar os dados).
-		-   Grafo.cpp - Criamos funções para a aplicação do método de grafo, diante da matriz adjacente;
-		-   main.cpp - Criamos o arquivo para apresentar e organizar corretamente as ideias.
-		- resultados.md - Apresentamos os resultados conforme solicitado.
+		-   Grafo.cpp - Criamos funções para a aplicação do método de grafo, diante da matriz adjacência;
+		-   main.cpp - Modificamos o arquivo para apresentar e organizar corretamente as ideias.
+
 
 ## Grafo.cpp
 > No arquivo Grafo.cpp foi desenvolvido as funções desde a alocação na matriz quanto a comparação da distância entre as cidades do RN.
 
 De início foi colocado as bibliotecas que iremos utilizar no decorrer do código, após isso é conectado o arquivo lerArquivos que tem como função as buscas e capturas de dados no banco de dados. Seguindo, temos a definição do tamanho e início do desenvolvimento das funções.
 
-
 ### float  **alocaMatriz()
-A função do tipo float alocaMatriz, irá alocar as informações dinamicamente na matriz diante do for e dos malloc apresentado no código e por fim irá retornar a matriz por completo.
+A função do tipo float alocaMatriz, irá alocar memória dinamicamente na matriz com o "FOR" apresentado no código e por fim irá retornar a matriz por completo.
 
 ### dataItem*  RN()
 Como o professor pediu para que seja pego as cidades do RN, é nessa estrutura que isso ocorre. Explicando um pouco o código, de início iremos pegar as cidades do RN e suas informações que estão no bancoDeDados.
