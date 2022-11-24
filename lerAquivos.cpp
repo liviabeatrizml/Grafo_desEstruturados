@@ -91,27 +91,6 @@ dataItem *getItens(cidade *cities, gps *local) {
     return dados;
 }
 
-dataItem *getItensRN(cidade *cities, gps *local) {
-    dataItem *dadosRN = (dataItem *)malloc(167 * sizeof(dataItem));
-    
-    int k = 0;
-    
-    for (size_t i = 0; i < 167; i++) {
-        dadosRN[k].key = cities[i].id;
-
-        for (size_t j = 0; j < 167; j++) {
-            if (cities[i].id == local[j].id) {
-                dadosRN[k].city = cities[i];
-                dadosRN[k].GPS = local[j];
-                
-                k++;
-            }
-        }
-    }
-
-    return dadosRN;
-}
-
 /*
 
 void printDataItens(gr *dados) {
