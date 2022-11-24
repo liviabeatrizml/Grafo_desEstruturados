@@ -130,15 +130,51 @@ void printDistTodasVizinhas(dataItem* informacoesRN){
         for (size_t j = 0; j < SIZE; j++) {
             if (i != j){
                 dist = sqrt(pow(informacoesRN[i].GPS.la - informacoesRN[j].GPS.la, 2) + pow(informacoesRN[i].GPS.lo - informacoesRN[j].GPS.lo, 2));
-            }
-
-            if (dist > maior){
-                maior = dist;
+            
+                if (dist > maior){
+                    maior = dist;
+                }
             }
         }
     }
 
-    printf("\nÉ necessario que a distancia seja de %.2f para que todas sejam vizinhas!!!\n", maior);
+    printf("\nEh necessario que a distancia seja de %.5f para que todas sejam vizinhas!!!\n", maior);
+}
+
+void printDistMinTodasVizinhas(dataItem* informacoesRN){
+    float dist, maior = 0;
+    
+    for (size_t i = 0; i < SIZE; i++) {
+        for (size_t j = 0; j < SIZE; j++) {
+            if (i != j){
+                dist = sqrt(pow(informacoesRN[i].GPS.la - informacoesRN[j].GPS.la, 2) + pow(informacoesRN[i].GPS.lo - informacoesRN[j].GPS.lo, 2));
+            
+                if (dist > maior){
+                    maior = dist;
+                }
+            }
+        }
+    }
+
+    printf("\nEh necessario que a distancia seja de %.5f para que nenhuma seja vizinhas!!!\n", maior);
+}
+
+void printDistMaxNenhumVizinhas(dataItem* informacoesRN){
+    float dist, menor = 100;
+    
+    for (size_t i = 0; i < SIZE; i++) {
+        for (size_t j = 0; j < SIZE; j++) {
+            if (i != j){
+                dist = sqrt(pow(informacoesRN[i].GPS.la - informacoesRN[j].GPS.la, 2) + pow(informacoesRN[i].GPS.lo - informacoesRN[j].GPS.lo, 2));
+            
+                if (dist < menor){
+                    menor = dist;
+                }
+            }
+        }
+    }
+
+    printf("\nEh necessaria que a distancia seja de %.5f para que todas sejam vizinhas!!!\n\n", menor);
 }
 
 void printGrafoMatricial(float **matriz){

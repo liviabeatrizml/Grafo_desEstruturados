@@ -23,13 +23,14 @@ int main(){
     // }
 
     //Questão III
-    for (size_t i = 0; i < 5; i++) {
-        printf("\n--- A cidade do RN que nao tem nenhuma vizinha com base na distancia de %f eh a seguinte. ---\n", D[i]);
-        printCidadeSemVizinhos(calculaDistancia(G, InfosRN, D[i]), InfosRN, D);
-    }
+    // for (size_t i = 0; i < 5; i++) {
+    //     printf("\n--- A cidade do RN que nao tem nenhuma vizinha com base na distancia de %f eh a seguinte. ---\n", D[i]);
+    //     printCidadeSemVizinhos(calculaDistancia(G, InfosRN, D[i]), InfosRN, D);
+    // }
 
     //Questão IV
-    // printDistTodasVizinhas(InfosRN);
+    // printDistMinTodasVizinhas(InfosRN);
+    // printDistMaxNenhumVizinhas(InfosRN);
 
 
     free(G);
