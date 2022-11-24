@@ -9,7 +9,7 @@
 #include "lerAquivos.cpp"
 #define SIZE 167
 
-typedef float** Grafo;
+// typedef float** Grafo;
 
 float **alocaMatriz(){
     size_t i, j;
@@ -44,24 +44,24 @@ dataItem* RN(){
     return cidadesDoRN;
 }
 
-Grafo criarGrafo(){
+float** criarGrafo(dataItem* informacoesRN){
     int i, j;
-    
-    float **matriz = (float **) malloc(SIZE * sizeof(float*));
 
-    for (size_t i = 0; i < SIZE; i++){
-        matriz[i] = (float *) malloc(SIZE * sizeof(float));
-    }
+    float **mat = (float** ) malloc(16 * sizeof(float*));
 
-    for (i = 0; i < SIZE; i++) {
-        for (j = 0; j < SIZE; j++) 
-            matriz[i][j] = 0;
-    }
+    // for(i = 0; i < SIZE; i++){
+    //     matriz[i] = (float* ) malloc(SIZE * sizeof(float));
+    // }
 
-    return matriz;
+    // for (i = 0; i < SIZE; i++) {
+    //     for (j = 0; j < SIZE; j++) 
+    //         matriz[i][j] = 0;
+    // }
+
+    // return matriz;
 }
 
-Grafo calculaDistancia(float **Grafo, dataItem* informacoesRN, float Distancia){
+float** calculaDistancia(float **Grafo, dataItem* informacoesRN, float Distancia){
     int i, j;
 
     for (i = 0; i < SIZE; i++){

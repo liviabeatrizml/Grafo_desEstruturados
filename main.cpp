@@ -7,7 +7,7 @@
 int main() {
     dataItem* InfosRN = RN();
 
-    Grafo G = criarGrafo();
+    float **G = criarGrafo(InfosRN);
     
     float D[] = {0.05, 0.1, 0.15, 0.20, 0.25};
 
