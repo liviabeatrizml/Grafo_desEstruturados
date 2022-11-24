@@ -44,14 +44,14 @@ dataItem* RN(){
     return cidadesDoRN;
 }
 
-float** criarGrafo(dataItem* informacoesRN){
+float **criarGrafo(dataItem* informacoesRN){
     int i, j;
 
-    float **mat = (float** ) malloc(16 * sizeof(float*));
+    // float **mat = (float**) malloc(SIZE*sizeof(float*));
+    // for(i = 0; i < SIZE; i++)
+    //     mat[i] = (float*) malloc(SIZE*sizeof(float));
 
-    // for(i = 0; i < SIZE; i++){
-    //     matriz[i] = (float* ) malloc(SIZE * sizeof(float));
-    // }
+    // float matriz[167][167];
 
     // for (i = 0; i < SIZE; i++) {
     //     for (j = 0; j < SIZE; j++) 
