@@ -1,12 +1,13 @@
 ## Resultados
 
 ### Tabela 
-| Dist | **Cid. mais viz** | Qnt | **Cid. menos viz** | Qnt |
-| ---- | ----------------- | --- | ------------------ | --- |
-| 0.05 |                   |     |        Acari       |  0  |
-| 0.10 |                   |     |        Acari       |  0  |
-| 0.20 |                   |     |        Acari       |  0  |
-| 0.25 |                   |     |        Acari       |  0  |
+| Dist |   **Cid. mais viz**  | Qnt | **Cid. menos viz** | Qnt |
+| ---- | -------------------- | --- | ------------------ | --- |
+| 0.05 | Senador Georgino Av. |  2  |        Acari       |  0  |
+| 0.10 |    Frutuoso Gomes    |  4  |        Acari       |  0  |
+| 0.15 |       Goianinha      |  7  |        Acari       |  0  |
+| 0.20 |       Brejinho       | 14  |        Acari       |  0  |
+| 0.25 |        Jundiá        | 19  |        Acari       |  0  |
 
 
 ### Tabela 
