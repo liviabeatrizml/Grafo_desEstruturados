@@ -10,6 +10,8 @@ int main(){
     dataItem* InfosRN = RN();
     float D[] = {0.05, 0.1, 0.15, 0.20, 0.25};
 
+    printGrafoMatricial(calculaDistancia(G, InfosRN, D[1]));
+
     // Questão I
     // for (size_t i = 0; i < 5; i++) {
     //     printf("--- GRAFO MATRICIAL das cidades vizinhas do RN com base na distancia de %f. ---\n", D[i]);
@@ -31,7 +33,6 @@ int main(){
     //Questão IV
     // printDistMinTodasVizinhas(InfosRN);
     // printDistMaxNenhumVizinhas(InfosRN);
-
 
     free(G);
 }

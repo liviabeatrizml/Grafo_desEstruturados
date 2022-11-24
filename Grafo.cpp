@@ -181,8 +181,8 @@ void printGrafoMatricial(float **matriz){
     for (int i = 0; i < SIZE; i++) {
         printf("\n");
         for (int j = 0; j < SIZE; j++) {
-            if(matriz[i][j] == 0){
-                printf("%.1f\t", matriz[i][j]);
+            if(matriz[i][j] == -1){
+                printf("%.0f\t", matriz[i][j]);
             } else {
                 printf("%.3f\t", matriz[i][j]);
             }
