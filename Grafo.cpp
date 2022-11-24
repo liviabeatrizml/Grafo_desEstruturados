@@ -58,20 +58,20 @@ float** calculaDistancia(float **Grafo, dataItem* informacoesRN, float Distancia
     int i, j;
 
     for (i = 0; i < SIZE; i++){
-        int cont = i+1;
+        // int cont = i+1;
 
-        for (j = 0; i < cont; i++){
+        for (j = 0; j < i+1; j++){
             if (i == j) {
-                Grafo[i][j] = 0;
+                Grafo[i][j] = -1;
             } else {
-                float dist = sqrt(pow(informacoesRN[i].GPS.la - informacoesRN[j].GPS.la, 2) + pow(informacoesRN[i].GPS.lo - informacoesRN[j].GPS.lo, 2));
+                float dist = sqrt(pow((informacoesRN[i].GPS.la - informacoesRN[j].GPS.la), 2) + pow((informacoesRN[i].GPS.lo - informacoesRN[j].GPS.lo), 2));
 
-                if(dist <= Distancia){
+                if(dist < Distancia){
                     Grafo[i][j] = dist;
                     Grafo[j][i] = dist;
                 } else {
-                    Grafo[i][j] = 0;
-                    Grafo[j][i] = 0;
+                    Grafo[i][j] = -1;
+                    Grafo[j][i] = -1;
                 }
             }
         } 
@@ -81,41 +81,43 @@ float** calculaDistancia(float **Grafo, dataItem* informacoesRN, float Distancia
 }
 
 void printCidadeComMaisVizinhos(float **Grafo, dataItem* informacoesRN, float Distancia){
-    int j = 0, cont = 0, quantVizinha = 0, idCidade;
+    int results[2] = {0, 0};
+    size_t cont = 0;
 
     for (size_t i = 0; i < SIZE; i++) {
-        cont = (Grafo[i][j] > 0) ? cont++ : cont;  
-
-        if(cont > quantVizinha){
-            idCidade = i;
-            quantVizinha = cont;
+        for (size_t j = 0; j < SIZE; j++){
+            cont = (Grafo[i][j] > 0) ? cont + 1 : cont;
         }
 
-        cont = 0;
-        j++;
+        if(cont > results[1]){
+            results[0] = i;
+            results[1] = cont;
+        }
+
+        cont *= 0;
     }
 
-    printf("\n\t %s e tem %d vizinhas!!!\n\n", informacoesRN[idCidade].city.cidade, quantVizinha);
+    printf("\n\t\t %s\t tem %d vizinhas!!!\n\n", informacoesRN[results[0]].city.cidade, results[1]);
 }
 
 void printCidadeSemVizinhos(float **Grafo, dataItem* informacoesRN, float* Distancias){
     int j = 0, quantVizinha = 0;
 
     for (size_t i = 0; i < SIZE; i++) {
-        if (Grafo[i][j] == 0){
-            quantVizinha == 0;
-            j++;
-        } else {
-            quantVizinha == 1;
-            i++;
-            j = 0; 
+        for (size_t j = 0; j < SIZE; j++){
+            if (Grafo[i][j] < 0){
+                quantVizinha == 0;
+            } else {
+                quantVizinha == 1;
+                break;
+            }
         }
 
-        if (quantVizinha == 0 && j == SIZE - 1){
+        if (quantVizinha == 0){
             printf("\n\t %s e tem 0 vizinhas!!!\n\n", informacoesRN[i].city.cidade);
             break;
         } else {
-            printf("\n\t Não há cidades sem vizinha!!!\n\n");
+            printf("\n\t Nao ha cidades sem vizinha!!!\n\n");
             break;
         }
     }
