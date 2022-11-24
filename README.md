@@ -16,10 +16,11 @@ Baseado no estudo dos Grafos, diante das aulas teóricas em sala de aula, foi po
 
  -  Alteração no código pré-determinado pelo professor
 	-   Arquivos não alterados
-	    -   cidade.cpp - Não alteramos nada nesse arquivo para mantermos a mesma estrutura dada pelo professor.
+	    -   cidade.cpp - Não alteramos nada nesse arquivo para mantermos a mesma estrutura utilizada no projeto Hash (https://github.com/liviabeatrizml/hashTable_desEstruturados);
+		-   lerArquivos.cpp - Não alteramos nada nesse arquivo para mantermos a mesma estrutura utilizada no projeto Hash (https://github.com/liviabeatrizml/hashTable_desEstruturados).
 	-   Arquivos alterados
 		-   bancoDeDados - Organizamos um banco de dados contendo as informações das cidades;
-		-   lerArquivos.cpp - XXX;
 		-   Grafo.cpp - Criamos funções para a aplicação do método de grafo, diante da matriz adjacente;
-		-   main.cpp - Modificamos o arquivo para apresentar e organizar corretamente as ideias.
+		-   main.cpp - Modificamos o arquivo para apresentar e organizar corretamente as ideias;
+		-   resultados.md - Apresentamos as resultados conforme solicitado.
 
