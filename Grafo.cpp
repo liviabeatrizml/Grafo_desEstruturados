@@ -82,19 +82,20 @@ float** calculaDistancia(float **Grafo, dataItem* informacoesRN, float Distancia
 
 void printCidadeComMaisVizinhos(float **Grafo, dataItem* informacoesRN, float Distancia){
     int results[2] = {0, 0};
-    size_t cont = 0;
-
+    
     for (size_t i = 0; i < SIZE; i++) {
+        size_t cont = 0;
+
         for (size_t j = 0; j < SIZE; j++){
-            cont = (Grafo[i][j] > 0) ? cont + 1 : cont;
+            if(Grafo[i][j] > 0){
+                cont++;
+            }
         }
 
         if(cont > results[1]){
             results[0] = i;
             results[1] = cont;
         }
-
-        cont *= 0;
     }
 
     printf("\n\t\t %s\t tem %d vizinhas!!!\n\n", informacoesRN[results[0]].city.cidade, results[1]);
